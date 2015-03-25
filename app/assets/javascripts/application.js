@@ -22,16 +22,16 @@ var toggleFavorite = function(activityId, userId) {
 		type: "POST",
 		data: {favorite: { user_id: userId, activity_id: activityId}},
 		success: function(response) {
-
+			
 		}
 	});
 }
 
 var displayFavorites = function() {
-	$target = $('.not_favorite').parent()
-	if ($target.css('display') === 'block') {
-		$target.css('display','none');
+	$divs = $('.not_favorite').parent()
+	if ($divs.css('display') === 'block') {
+		$divs.css('display','none');
 	} else {
-		$target.css('display', 'block');
+		$divs.css('display', 'block');
 	}
 }
