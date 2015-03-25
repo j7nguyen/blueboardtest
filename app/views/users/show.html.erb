@@ -13,7 +13,7 @@
 
 <% @activities.each do |activity| %>
 <div class="offering expand-div" id="offering_<%=activity.id%>">
-<div class="img" style="background-image: url(<%= activity.img_url%>);"></div>
+<a href="<%=activity.offer_url%>" class="img" style="background-image: url(<%= activity.img_url%>);"></a>
 <% if favorited?(activity.id) %>
 	<div class="favorited"><h3>In Favorites</h3></div>
 <% else %>

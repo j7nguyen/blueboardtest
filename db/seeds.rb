@@ -40,3 +40,7 @@ activities = Activity.create([
   {offer_url: "https://wellness.blueboard.co/offerings/202", img_url: "https://blueboard-production.s3.amazonaws.com/uploads/offering/image/202/normal_Hero.jpg",caption: "Your Personal Dating Coach"},
   {offer_url: "https://wellness.blueboard.co/offerings/219", img_url: "https://blueboard-production.s3.amazonaws.com/uploads/offering/image/219/normal_Massage-potential1.jpg", caption: "Luxurious Relaxation at Nob Hill Spa | For Two"}
 ])
+
+companies = Company.create([
+  {name: "Corporation Inc. LLC"}
+])
