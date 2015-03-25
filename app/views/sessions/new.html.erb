@@ -1,0 +1,19 @@
+<form class="form-signin" role='form' action="<%= session_url %>" method="post">
+	<h3 class='form-signin-heading'>Please Sign In or <%= link_to "Sign Up", new_user_url %></h3>
+	<%= auth_token_input %>
+ 
+	<input class='form-control' type="text" name="session[email]" placeholder='Email address' required autofocus>
+	<input class='form-control' type="password" name="session[password]" placeholder='Password' required>
+
+	
+	<button class='btn login-btn btn-md btn-primary' type='submit'>Sign In</button>
+</form>
+
+<form class="form-signin" role='form' action="<%= session_url %>" method="post">
+	<%= auth_token_input %>
+ 
+	<input class='form-control' type="hidden" name="session[email]" placeholder='Email address' value="joseph@company.com">
+	<input class='form-control' type="hidden" name="session[password]" placeholder='Password' value="foobar">
+	
+	<button class='btn login-btn btn-md btn-warning' type='submit'>Sign In As Guest</button>
+</form>

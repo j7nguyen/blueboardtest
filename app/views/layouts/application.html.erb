@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlueboardDevTest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrap">
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="manager-navbar container">
+<a href="https://www.blueboard.co/" class="logo-flag"><img alt="Logo_white" src="<%= image_url "logo_white.png" %>" width="92"></a>
+<ul class="nav">
+<li><a href="https://wellness.blueboard.co/">Dashboard</a></li>
+<li class="dropdown">
+<a href="https://wellness.blueboard.co/preview/6#" class="dropdown-toggle" data-toggle="dropdown">Manage <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="https://wellness.blueboard.co/companies/492/edit">Company</a></li>
+<li><a href="https://wellness.blueboard.co/managers">Managers</a></li>
+<li><a href="https://wellness.blueboard.co/employees">Employees</a></li>
+</ul>
+</li>
+<li><a href="https://wellness.blueboard.co/reports">Reports</a></li>
+<li><a href="https://wellness.blueboard.co/support">Support</a></li>
+<li class="dropdown">
+<a href="https://wellness.blueboard.co/preview/6#" class="dropdown-toggle" data-toggle="dropdown">Manager Taylor <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="nav-header">Use Blueboard As</li>
+<li><a href="https://wellness.blueboard.co/accounts/switch-role/34" data-method="put" rel="nofollow">Blueboard</a></li>
+<li><a href="https://wellness.blueboard.co/accounts/switch-role/579" data-method="put" rel="nofollow">Taylor Smith</a></li>
+<li class="divider"></li>
+<li><a href="https://wellness.blueboard.co/accounts/5/edit">My Account</a></li>
+<li><a href="https://wellness.blueboard.co/accounts/sign_out" data-method="delete" rel="nofollow">Logout</a></li>
+</ul>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<%= yield %>
+
+</body>
+</html>

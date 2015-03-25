@@ -1,0 +1,28 @@
+
+<div id="content">
+
+<div class="container main-content">
+
+<br>
+<h1 class="sg-page-title">
+<div class="r-6 reward-icon size-30"></div>
+Indigo
+Experiences
+</h1>
+<div class="clearfix"></div>
+<br>
+<div class="container offerings">
+
+<% @favorites.each do |favorite| %>
+<div class="offering" id="offering_<%=favorite.activity.id%>">
+<div class="img" style="background-image: url(<%= favorite.activity.img_url%>);"></div>
+<% if favorited?(favorite.activity.id) %>
+	<div class="favorited"><h3>FAVORITED</h3></div>
+<% else %>
+	<div class="not_favorite"><h3>FAVORITE</h3></div>
+<% end %>
+<div class="info sg-img-caption">
+<h3 class="name"><a href="<%=favorite.activity.offer_url%>" class="txt"><%= favorite.activity.caption %></a></h3>
+</div>
+</div>
+<% end %>
