@@ -8,7 +8,7 @@
 Indigo
 Experiences
 </h1>
-<div class="btn btn-primary" id="fav_toggle">Only show favorites</div>
+<div class="btn btn-primary" id="fav_toggle">Only show favorite activities</div>
 <div class="clearfix"></div>
 <br>
 <div class="container offerings">
@@ -45,7 +45,7 @@ $('#fav_toggle').click(function(event) {
 	$target = $(event.target);
 	displayFavorites();
 	if ($target.text() === "Show all activities") {
-		$target.text("Only show favorites");
+		$target.text("Only show favorite activities");
 	} else {
 		$target.text("Show all activities");		
 	}
