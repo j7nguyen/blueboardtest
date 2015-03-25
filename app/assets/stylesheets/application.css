@@ -18,3 +18,38 @@
 .offering .favorited {position:absolute;top:0;right:0}
 .offering .not_favorite h3 {margin:0;font-weight:normal;color:white;background-color:gray}
 .offering .favorited h3 {margin:0;font-weight:normal;color:yellow;background-color:black}
+
+.offering {
+	position:relative;
+	margin:0 0 12px;
+	-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);
+	box-shadow:0 2px 4px rgba(0,0,0,0.2);
+	border:1px solid #fff;
+	cursor:pointer;
+	height:60px;
+	-webkit-transition: height 0.5s;
+	transition: height 0.5s;
+} 
+
+.offering:hover {
+	height: 350px;
+}
+
+.offering .img{
+	display:block;height:100%;
+	overflow:hidden;opacity:.8;
+	-moz-box-shadow:0 0 12px rgba(0,0,0,0.1) inset;
+	-webkit-box-shadow:0 0 12px rgba(0,0,0,0.1) inset;
+	box-shadow:0 0 12px rgba(0,0,0,0.1) inset;
+	-moz-transition:opacity 0.35s;
+	-o-transition:opacity 0.35s;
+	-ms-transition:opacity 0.35s;
+	-webkit-transition:opacity 0.35s;
+	transition:opacity 0.35s
+} 
+
+.offering .info{position:absolute;bottom:0;left:0} 
+.offering .info h3{margin:0;font-weight:normal} 
+.offering:hover .img{opacity:1} 
+.offering.no-link{cursor:default} 

@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   
   has_many :favorites
   has_many :activities, through: :favorites, source: :activity
+  belongs_to :company
   
   def name
     return "#{self.first_name} #{self.last_name}"

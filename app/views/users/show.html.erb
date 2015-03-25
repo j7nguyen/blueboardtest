@@ -2,24 +2,22 @@
 <div id="content">
 
 <div class="container main-content">
-
 <br>
 <h1 class="sg-page-title">
-Indigo
-Experiences
+<%= current_user.company.name %>'s Activities
 </h1>
-<div class="btn btn-primary" id="fav_toggle">Only show favorite activities</div>
+<div class="btn btn-primary" id="fav_toggle">Only show favorited activities</div>
 <div class="clearfix"></div>
 <br>
 <div class="container offerings">
 
 <% @activities.each do |activity| %>
-<div class="offering" id="offering_<%=activity.id%>">
+<div class="offering expand-div" id="offering_<%=activity.id%>">
 <div class="img" style="background-image: url(<%= activity.img_url%>);"></div>
 <% if favorited?(activity.id) %>
-	<div class="favorited"><h3>FAVORITED</h3></div>
+	<div class="favorited"><h3>In Favorites</h3></div>
 <% else %>
-	<div class="not_favorite"><h3>FAVORITE</h3></div>
+	<div class="not_favorite"><h3>Add to Favorites</h3></div>
 <% end %>
 <div class="info sg-img-caption">
 <h3 class="name"><a href="<%=activity.offer_url%>" class="txt"><%= activity.caption %></a></h3>
@@ -34,10 +32,10 @@ $('.not_favorite h3, .favorited h3').click(function(event) {
 	var activityId = $target.parent().parent().attr("id").slice(-1);
 	$target.parent().toggleClass('not_favorite favorited');
 	toggleFavorite(activityId, userId);
-	if ($target.text() === "FAVORITE") {
-		$target.text("FAVORITED");
+	if ($target.text() === "Add to Favorites") {
+		$target.text("In Favorites");
 	} else {
-		$target.text("FAVORITE");
+		$target.text("Add to Favorites");
 	}
 });
 
@@ -45,9 +43,15 @@ $('#fav_toggle').click(function(event) {
 	$target = $(event.target);
 	displayFavorites();
 	if ($target.text() === "Show all activities") {
-		$target.text("Only show favorite activities");
+		$target.text("Only show favorited activities");
 	} else {
 		$target.text("Show all activities");		
 	}
 });
+
+// $('.offering').hover(function() {
+// 	$(this).css("height", "350px");
+// }, function() {
+// 	$(this).css("height", "100px");
+// });
 </script>
